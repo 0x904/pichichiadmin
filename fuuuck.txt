@@ -1,0 +1,7 @@
+CREATE DATABASE IF NOT EXISTS prueba;
+USE prueba;
+
+CREATE TABLE `prueba`.`persona` (`id` TINYINT NOT NULL AUTO_INCREMENT , `nombre` VARCHAR(50) NULL DEFAULT NULL , `fechaNacimiento` DATE NULL DEFAULT NULL , `edad` TINYINT UNSIGNED NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB CHARSET=latin1 COLLATE latin1_spanish_ci;
+
+CREATE VIEW personasView AS SELECT nombre, edad FROM persona;
+(where opcional si hacen falta condicione)
